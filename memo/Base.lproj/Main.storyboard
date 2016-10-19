@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csG-52-Svr" userLabel="青">
@@ -42,18 +43,15 @@
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVg-rQ-2jo">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-bg-Pe5">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="637" id="oit-NL-PNI"/>
-                                        </constraints>
-                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-bg-Pe5"/>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="NGb-bg-Pe5" secondAttribute="bottom" constant="-20" id="6aH-qB-TCb"/>
-                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="centerX" secondItem="IVg-rQ-2jo" secondAttribute="centerX" id="Dx1-ur-pS0"/>
-                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="top" secondItem="IVg-rQ-2jo" secondAttribute="top" id="HHl-49-JYt"/>
-                                    <constraint firstAttribute="trailing" secondItem="NGb-bg-Pe5" secondAttribute="trailing" id="npX-k1-hJi"/>
-                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="leading" secondItem="IVg-rQ-2jo" secondAttribute="leading" id="pH2-ix-oJv"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="NGb-bg-Pe5" secondAttribute="trailing" id="BuA-gh-KkS"/>
+                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="leading" secondItem="IVg-rQ-2jo" secondAttribute="leadingMargin" id="Oko-gb-aDe"/>
+                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="centerY" secondItem="IVg-rQ-2jo" secondAttribute="centerY" id="Rwa-Go-NuT"/>
+                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="top" secondItem="IVg-rQ-2jo" secondAttribute="topMargin" id="Tub-dp-sqs"/>
+                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="centerX" secondItem="IVg-rQ-2jo" secondAttribute="centerX" id="gVd-4a-uAn"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="NGb-bg-Pe5" secondAttribute="bottom" id="o4B-NV-bwC"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wEQ-Hq-vpD"/>
@@ -81,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="136.5234375" y="138.79941434846265"/>
         </scene>
     </scenes>
 </document>
