@@ -18,18 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVg-rQ-2jo">
-                                <frame key="frameInset" minY="20" width="375" height="647"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csG-52-Svr">
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-bd-VOY">
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVg-rQ-2jo">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-bg-Pe5">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="572"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-bg-Pe5">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="637" id="oit-NL-PNI"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="top" secondItem="IVg-rQ-2jo" secondAttribute="top" constant="28" id="3uK-WS-WYG"/>
-                                    <constraint firstAttribute="bottom" secondItem="NGb-bg-Pe5" secondAttribute="bottom" constant="47" id="E6T-H1-NOP"/>
-                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="leading" secondItem="IVg-rQ-2jo" secondAttribute="leading" id="H2D-eS-hQq"/>
-                                    <constraint firstAttribute="trailing" secondItem="NGb-bg-Pe5" secondAttribute="trailing" id="sU3-Wo-X6E"/>
+                                    <constraint firstAttribute="bottom" secondItem="NGb-bg-Pe5" secondAttribute="bottom" constant="-20" id="6aH-qB-TCb"/>
+                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="centerX" secondItem="IVg-rQ-2jo" secondAttribute="centerX" id="Dx1-ur-pS0"/>
+                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="top" secondItem="IVg-rQ-2jo" secondAttribute="top" id="HHl-49-JYt"/>
+                                    <constraint firstAttribute="trailing" secondItem="NGb-bg-Pe5" secondAttribute="trailing" id="npX-k1-hJi"/>
+                                    <constraint firstItem="NGb-bg-Pe5" firstAttribute="leading" secondItem="IVg-rQ-2jo" secondAttribute="leading" id="pH2-ix-oJv"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wEQ-Hq-vpD"/>
@@ -38,10 +46,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="IVg-rQ-2jo" secondAttribute="trailing" id="KWI-wa-15o"/>
-                            <constraint firstItem="IVg-rQ-2jo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T8v-hA-hS1"/>
-                            <constraint firstItem="IVg-rQ-2jo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eQa-Qh-cTy"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IVg-rQ-2jo" secondAttribute="bottom" id="wbX-Mc-pXt"/>
+                            <constraint firstItem="csG-52-Svr" firstAttribute="leading" secondItem="jMW-bd-VOY" secondAttribute="trailing" constant="10" id="TtG-fg-9Cf"/>
+                            <constraint firstAttribute="trailing" secondItem="IVg-rQ-2jo" secondAttribute="trailing" id="YOH-Ja-r7u"/>
+                            <constraint firstAttribute="bottom" secondItem="jMW-bd-VOY" secondAttribute="bottom" constant="10" id="eAy-iy-a80"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="csG-52-Svr" secondAttribute="bottom" constant="10" id="gI8-pP-AeE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IVg-rQ-2jo" secondAttribute="bottom" constant="35" id="mAD-x9-cqI"/>
+                            <constraint firstItem="IVg-rQ-2jo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="q6S-Hr-uZc"/>
+                            <constraint firstItem="IVg-rQ-2jo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rcZ-TJ-knL"/>
+                            <constraint firstAttribute="trailing" secondItem="csG-52-Svr" secondAttribute="trailing" constant="10" id="s2C-y1-ENs"/>
                         </constraints>
                     </view>
                     <connections>

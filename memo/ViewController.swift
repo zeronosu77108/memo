@@ -52,7 +52,7 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
    キャンバスの準備 (何も描かれていないUIImageの作成)
    */
   func prepareCanvas() {
-    let canvasSize = CGSize(width: view.frame.width * 2, height: view.frame.width * 2)     //キャンバスのサイズの決定
+    let canvasSize = CGSize(width: view.frame.width * 2, height: view.frame.height * 2)     //キャンバスのサイズの決定
     let canvasRect = CGRect(x: 0, y: 0, width: canvasSize.width, height: canvasSize.height)      //キャンバスのRectの決定
     UIGraphicsBeginImageContextWithOptions(canvasSize, false, 0.0)              //コンテキスト作成(キャンバスのUIImageを作成する為)
     var firstCanvasImage = UIImage()                                            //キャンバス用UIImage(まだ空っぽ)
