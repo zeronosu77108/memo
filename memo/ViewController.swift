@@ -11,14 +11,15 @@ import UIKit
 class ViewController: UIViewController, UIScrollViewDelegate  {
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var canvasView: UIImageView!
+
   //ViewController.isUserInteractionEnabled = true
  
   var lastPoint: CGPoint?                 //直前のタッチ座標の保存用
   
   var lineWidth: CGFloat?                 //描画用の線の太さの保存用
-  var drawColor = UIColor()               //描画色の保存用
-  var bezierPath = UIBezierPath()         //お絵描きに使用
-  
+  var drawColor = UIColor.black              //描画色の保存用
+  //var bezierPath = UIBezierPath()         //お絵描きに使用
+  var bezierPath: UIBezierPath?             // お絵描き用に使用　変数宣言のみしておく
   let defaultLineWidth: CGFloat = 10.0    //デフォルトの線の太さ
 
 
@@ -101,22 +102,24 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     
     switch drawGesture.state {
     case .began:
+      bezierPath = UIBezierPath()               //書くたびに被せていく
       lastPoint = touchPoint                                      //タッチ座標をlastTouchPointとして保存する
+   
       
       //touchPointの座標はscrollView基準なのでキャンバスの大きさに合わせた座標に変換しなければいけない
       //LastPointをキャンバスサイズ基準にConvert
       let lastPointForCanvasSize = convertPointForCanvasSize(originalPoint: lastPoint!, canvasSize: canvas.size)
       
-      bezierPath.lineCapStyle = .round                            //描画線の設定 端を丸くする
-      bezierPath.lineWidth = defaultLineWidth                     //描画線の太さ
-      bezierPath.move(to: lastPointForCanvasSize)
+      bezierPath?.lineCapStyle = .round                            //描画線の設定 端を丸くする
+      bezierPath?.lineWidth = defaultLineWidth                     //描画線の太さ
+      bezierPath?.move(to: lastPointForCanvasSize)
       
     case .changed:
       
       let newPoint = touchPoint                                   //タッチポイントを最新として保存
       
       //Draw実行
-      let imageAfterDraw = drawGestureAtChanged(canvas: canvas, lastPoint: lastPoint!, newPoint: newPoint, bezierPath: bezierPath)
+      let imageAfterDraw = drawGestureAtChanged(canvas: canvas, lastPoint: lastPoint!, newPoint: newPoint, bezierPath: bezierPath!)
       self.canvasView.image = imageAfterDraw                      //Draw画像をCanvasに上書き
       lastPoint = newPoint                                        //Point保存
       
@@ -154,7 +157,7 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     UIGraphicsBeginImageContextWithOptions(canvas.size, false, 0.0)                 //コンテキストを作成
     let canvasRect = CGRect(x:0, y:0, width:canvas.size.width, height:canvas.size.height)        //コンテキストのRect
     self.canvasView.image?.draw(in: canvasRect)                                   //既存のCanvasを準備
-    //drawColor.setStroke()                                                           //drawをセット
+    drawColor.setStroke()                                                           //drawをセット
     bezierPath.stroke()                                                             //draw実行
     let imageAfterDraw = UIGraphicsGetImageFromCurrentImageContext()                //Draw後の画像
     UIGraphicsEndImageContext()                                                     //コンテキストを閉じる
@@ -191,7 +194,26 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     return convertPoint
     
   }
+    
+    // 青ボタン追加
+    @IBAction func selectBlue(_ sender: AnyObject) {
+        drawColor = UIColor.blue
+    }
 
+    
+    // 赤ボタン追加
+    @IBAction func selectRed(_ sender: AnyObject) {
+        drawColor = UIColor.red      //赤色に変更する
+    }
+    
+
+    // 黒ボタン追加
+    @IBAction func selectBlack(_ sender: AnyObject) {
+        drawColor = UIColor.black
+    }
+    
+    
+    
   
 }
 
