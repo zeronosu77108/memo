@@ -184,8 +184,8 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
       
     }
     
-    let convertPoint = CGPoint(x: originalPoint.x /** ajustContextSize.width / viewSize.width - diffSize.width*/,
-                               y: originalPoint.y /** ajustContextSize.height / viewSize.height - diffSize.height*/)
+    let convertPoint = CGPoint(x: originalPoint.x * ajustContextSize.width / viewSize.width - diffSize.width,
+                               y: originalPoint.y * ajustContextSize.height / viewSize.height - diffSize.height)
     
     
     return convertPoint
