@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
   //var bezierPath = UIBezierPath()         //お絵描きに使用
   var bezierPath: UIBezierPath?             // お絵描き用に使用　変数宣言のみしておく
   let defaultLineWidth: CGFloat = 10.0    //デフォルトの線の太さ
+  var myGreenSlider = UISlider(frame: CGRect(x:0, y:0, width:370, height:30))//スライダー定義
 
 
   override func viewDidLoad() {
@@ -33,8 +34,31 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     scrollView.zoomScale = 1.0                          // 表示時の拡大率(初期値)
     
     prepareDrawing()                                    //お絵描き準備
+    
+    initSlider()
+    
   }
 
+    func initSlider() {
+        
+        // Sliderを作成する.
+        myGreenSlider.layer.position = CGPoint(x:self.view.frame.midX, y:self.view.frame.midY*2-65)
+        //myGreenSlider.backgroundColor = UIColor.white
+        //myGreenSlider.layer.cornerRadius = 10.0
+        //myGreenSlider.layer.shadowOpacity = 0.5
+        //myGreenSlider.layer.masksToBounds = false
+        myGreenSlider.isHidden = true
+        self.view.setNeedsDisplay()
+        self.view.addSubview(myGreenSlider)
+        // 最小値と最大値を設定する.
+        myGreenSlider.minimumValue = 0.2
+        myGreenSlider.maximumValue = 1
+        
+        // Sliderの位置を設定する.
+        myGreenSlider.value = 0.5
+        
+    }
+    
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -111,7 +135,7 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
       let lastPointForCanvasSize = convertPointForCanvasSize(originalPoint: lastPoint!, canvasSize: canvas.size)
       
       bezierPath?.lineCapStyle = .round                            //描画線の設定 端を丸くする
-      bezierPath?.lineWidth = defaultLineWidth                     //描画線の太さ
+      bezierPath?.lineWidth = defaultLineWidth * CGFloat(myGreenSlider.value)                 //描画線の太さ
       bezierPath?.move(to: lastPointForCanvasSize)
       
     case .changed:
@@ -213,6 +237,10 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     }
     
     
+    //
+    @IBAction func pressSliderButton(_ sender: AnyObject) {
+        myGreenSlider.isHidden = !myGreenSlider.isHidden
+    }
     
   
 }
