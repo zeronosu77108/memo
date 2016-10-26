@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
   //var bezierPath = UIBezierPath()         //お絵描きに使用
   var bezierPath: UIBezierPath?             // お絵描き用に使用　変数宣言のみしておく
   let defaultLineWidth: CGFloat = 10.0    //デフォルトの線の太さ
-  var myGreenSlider = UISlider(frame: CGRect(x:0, y:0, width:370, height:30))//スライダー定義
+  var myGreenSlider = UISlider() //スライダー定義
 
 
   override func viewDidLoad() {
@@ -42,8 +42,9 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     func initSlider() {
         
         // Sliderを作成する.
-        myGreenSlider.layer.position = CGPoint(x:self.view.frame.midX, y:self.view.frame.midY*2-65)
-        //myGreenSlider.backgroundColor = UIColor.white
+        myGreenSlider = UISlider(frame: CGRect(x:0, y:0, width:self.view.frame.width - 20, height:30))
+        myGreenSlider.layer.position = CGPoint(x:self.view.frame.midX, y:self.view.frame.height-65)
+        //myGreenSlider.backgroundColor = UIColor.whit
         //myGreenSlider.layer.cornerRadius = 10.0
         //myGreenSlider.layer.shadowOpacity = 0.5
         //myGreenSlider.layer.masksToBounds = false
