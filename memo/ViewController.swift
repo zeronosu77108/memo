@@ -86,7 +86,7 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     UIRectFill(canvasRect)                                                      //白色塗りつぶし作業2
     firstCanvasImage.draw(in: canvasRect)                                     //firstCanvasImageの内容を描く(真っ白)
     firstCanvasImage = UIGraphicsGetImageFromCurrentImageContext()!              //何も描かれてないUIImageを取得
-    canvasView.contentMode = .scaleAspectFit                                    //contentModeの設定
+    //canvasView.contentMode = .scaleAspectFit                                    //contentModeの設定
     canvasView.image = firstCanvasImage                                         //画面の表示を更新
     UIGraphicsEndImageContext()                                                 //コンテキストを閉じる
   }
@@ -118,6 +118,8 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
       return
     }
     
+    
+    //消す？
     guard let canvas = self.canvasView.image else {
       fatalError("self.pictureView.image not found")
     }
@@ -238,11 +240,15 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
     }
     
     
-    //
+    //太さを変更するボタンを追加
     @IBAction func pressSliderButton(_ sender: AnyObject) {
         myGreenSlider.isHidden = !myGreenSlider.isHidden
     }
     
+    //削除ボタン追加
+    @IBAction func clearCanvas(_ sender: AnyObject) {
+        prepareCanvas()
+    }
   
 }
 
