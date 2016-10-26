@@ -192,7 +192,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = U;
+				ORGANIZATIONNAME = Ryuki;
 				TargetAttributes = {
 					6150B1E11DAE05FE00C40245 = {
 						CreatedOnToolsVersion = 8.0;
@@ -416,11 +416,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D49QJUP39F;
+				DEVELOPMENT_TEAM = S546Q43RS6;
 				INFOPLIST_FILE = memo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = U.memo;
+				PRODUCT_BUNDLE_IDENTIFIER = ryuki.memo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,11 +430,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D49QJUP39F;
+				DEVELOPMENT_TEAM = S546Q43RS6;
 				INFOPLIST_FILE = memo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = U.memo;
+				PRODUCT_BUNDLE_IDENTIFIER = ryuki.memo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
