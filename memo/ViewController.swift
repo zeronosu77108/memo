@@ -250,5 +250,12 @@ class ViewController: UIViewController, UIScrollViewDelegate  {
         prepareCanvas()
     }
   
+    /**
+     Saveボタンを押した時の動作
+     お絵描きをカメラロールへ保存する
+     */
+    @IBAction func saveCanvas(_ sender: AnyObject) {
+        UIImageWriteToSavedPhotosAlbum(self.canvasView.image!, self, nil, nil) 
+    }
 }
 

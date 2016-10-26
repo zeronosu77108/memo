@@ -77,19 +77,25 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piz-m7-rBy">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="4lu-GU-LNJ"/>
-                                    <constraint firstAttribute="height" constant="30" id="XEk-pJ-9FZ"/>
-                                </constraints>
                                 <state key="normal" title="削"/>
                                 <connections>
                                     <action selector="clearCanvas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0e-Wo-WOw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lm-G7-Iqa">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ZWJ-X7-BPw"/>
+                                    <constraint firstAttribute="height" constant="30" id="sFr-qt-C1P"/>
+                                </constraints>
+                                <state key="normal" title="保"/>
+                                <connections>
+                                    <action selector="saveCanvas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kay-mv-Nkl"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykQ-m0-fcf">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="3tY-R8-SGV"/>
-                                    <constraint firstAttribute="height" constant="32" id="oaw-Pt-3Lr"/>
+                                    <constraint firstAttribute="height" constant="32" id="epr-bi-oz4"/>
+                                    <constraint firstAttribute="width" constant="50" id="g3r-bH-de0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="●">
@@ -102,19 +108,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3Lm-G7-Iqa" firstAttribute="leading" secondItem="ykQ-m0-fcf" secondAttribute="trailing" constant="10" id="19l-nM-HpN"/>
                             <constraint firstAttribute="trailing" secondItem="csG-52-Svr" secondAttribute="trailing" constant="20" id="1I2-mp-Gjf"/>
-                            <constraint firstItem="ykQ-m0-fcf" firstAttribute="leading" secondItem="piz-m7-rBy" secondAttribute="trailing" constant="15" id="1bR-5d-36b"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="piz-m7-rBy" secondAttribute="bottom" constant="10" id="5BU-sQ-Pme"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jMW-bd-VOY" secondAttribute="bottom" constant="10" id="6c1-b3-YGy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="piz-m7-rBy" secondAttribute="bottom" constant="10" id="7wQ-H6-6s6"/>
+                            <constraint firstItem="piz-m7-rBy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="A9k-WT-iTi"/>
                             <constraint firstItem="csG-52-Svr" firstAttribute="leading" secondItem="jMW-bd-VOY" secondAttribute="trailing" constant="15" id="KV4-nI-V1y"/>
                             <constraint firstItem="jMW-bd-VOY" firstAttribute="leading" secondItem="Zix-a9-U60" secondAttribute="trailing" constant="15" id="Pnw-Ni-gpY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="csG-52-Svr" secondAttribute="bottom" constant="10" id="Q2E-FB-7E7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3Lm-G7-Iqa" secondAttribute="bottom" constant="10" id="REK-qI-rQS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zix-a9-U60" secondAttribute="bottom" constant="10" id="S9B-jG-3yb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zix-a9-U60" secondAttribute="bottom" constant="10" id="WGY-Gi-pfX"/>
                             <constraint firstAttribute="trailing" secondItem="IVg-rQ-2jo" secondAttribute="trailing" id="YOH-Ja-r7u"/>
-                            <constraint firstItem="piz-m7-rBy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ekj-hY-VKD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ykQ-m0-fcf" secondAttribute="bottom" constant="10" id="ftX-Qx-JAB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IVg-rQ-2jo" secondAttribute="bottom" constant="35" id="mAD-x9-cqI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ykQ-m0-fcf" secondAttribute="bottom" constant="10" id="pPI-OD-hZP"/>
+                            <constraint firstItem="ykQ-m0-fcf" firstAttribute="leading" secondItem="piz-m7-rBy" secondAttribute="trailing" constant="10" id="o6A-rl-t66"/>
                             <constraint firstItem="IVg-rQ-2jo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="q6S-Hr-uZc"/>
                             <constraint firstItem="IVg-rQ-2jo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rcZ-TJ-knL"/>
                         </constraints>
